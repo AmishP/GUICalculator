@@ -35,7 +35,7 @@ public class Frame1 {
 	private int firstNumber;
 	private int secondNumber;
 	private String type;
-	
+
 	/**
 	 * Launch the application.
 	 */
@@ -72,13 +72,14 @@ public class Frame1 {
 		JButton button_1 = new JButton("1");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				lblDisplay.setText("You have pressed the button: " + ONE);
-				if(type!=null){
+				// lblDisplay.setText("You have pressed the button: " + ONE);
+				if (type != null) {
 					secondNumber = secondNumber + ONE;
 				} else {
 					firstNumber = firstNumber + ONE;
 				}
-				lblDisplay.setText("firstNumber: " + firstNumber + "secondNumber: " +secondNumber);
+				lblDisplay.setText("firstNumber: " + firstNumber
+						+ "secondNumber: " + secondNumber);
 			}
 		});
 		button_1.setBounds(9, 121, 66, 49);
@@ -87,13 +88,14 @@ public class Frame1 {
 		JButton button_2 = new JButton("2");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				if(type!=null){
+
+				if (type != null) {
 					secondNumber = secondNumber + TWO;
 				} else {
 					firstNumber = firstNumber + TWO;
 				}
-				lblDisplay.setText("firstNumber: " + firstNumber + "secondNumber: " +secondNumber);
+				lblDisplay.setText("firstNumber: " + firstNumber
+						+ "secondNumber: " + secondNumber);
 			}
 		});
 		button_2.setBounds(85, 121, 66, 49);
@@ -222,10 +224,10 @@ public class Frame1 {
 		JButton button_equals = new JButton("=");
 		button_equals.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				int total = add(firstNumber, secondNumber);
 				String totalS = String.valueOf(total);
-				
+
 				lblDisplay.setText(totalS);
 			}
 		});
@@ -246,8 +248,7 @@ public class Frame1 {
 			}
 		});
 		mnFile.add(mntmClose);
-		
-		
+
 	}
 
 	public static int add(int a, int b) {
@@ -277,7 +278,4 @@ public class Frame1 {
 		System.out.println("Total: " + total);
 		return total;
 	}
-	}
-
-
-
+}
